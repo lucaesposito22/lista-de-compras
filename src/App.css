@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: flex-start; 
+  background-color: #F4F5FB;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#botao-voltar{
+  color: #CA3884;
+}
+
+h2{
+  color: #080B12;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto 0 auto; 
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  padding-right: 280px;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+  border-color: #D1D5DB;
+  border: 1px solid #D1D5DB;     
+  outline: none;  
+  color: #080B12;
+  margin-right: 12px;
+  margin-top: 20px;
+}
+input:hover {
+  border-color: #B9C2D0;
+}
+input:focus {
+  border-color: #CA3884;     
+}
+
+#adicionar {
+  padding: 8px 18px;
+  font-size: 16px;
+  margin-left: 8px;
+  background-color: #CA3884;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 200;
+  outline: none; 
+}
+
+#adicionar:hover {
+  background-color: #A52C6B;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+li {
+  display: flex;
+  align-items: center;     
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  margin: 5px 0;
+  margin-top: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #080B12;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox:not(.marcado):hover {
+  content: url('./assets/checkbox-hover.png');
+}
+
+.texto-item.comprado {
+  text-decoration: line-through;
+  color: #727272 ;
+}
+
+
+.texto-item {
+  flex: 1;                
+  color: #080B12;
+  font-size: 16px;
+}
+
+.IconDelete {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.mensagem-remocao {
+  margin-top: 12px;
+  color: #ffffff;
+  background-color: #C93847;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 32px; 
+    align-items: stretch;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  input,
+  #adicionar {
+    width: 100%;
+    margin: 0;
+  }
+
+  
+
+  li {
+    /* Remova o flex-wrap para manter os elementos na mesma linha */
+    flex-wrap: nowrap;  /* ou simplesmente remova essa propriedade */
+    width: 100%;
+    align-items: center; /* garante alinhamento vertical */
+  }
+
+  .texto-item {
+    flex: 1 1 auto; /* ocupa espaço disponível */
+    text-align: left;
+    white-space: nowrap; /* evita quebra de linha no texto */
+    overflow: hidden;
+    text-overflow: ellipsis; /* corta texto com "..." se for muito grande */
+  }
+
+  .IconDelete {
+    margin-top: 0;
+    margin-left: 12px; /* mantém margem lateral para separar o ícone do texto */
+  }
+}
+
+
