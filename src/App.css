@@ -166,24 +166,37 @@ li {
   
 
   li {
-    /* Remova o flex-wrap para manter os elementos na mesma linha */
-    flex-wrap: nowrap;  /* ou simplesmente remova essa propriedade */
+    flex-wrap: nowrap;
     width: 100%;
-    align-items: center; /* garante alinhamento vertical */
+    align-items: center;
   }
 
   .texto-item {
-    flex: 1 1 auto; /* ocupa espaço disponível */
+    flex: 1 1 auto;
     text-align: left;
-    white-space: nowrap; /* evita quebra de linha no texto */
+    white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis; /* corta texto com "..." se for muito grande */
+    text-overflow: ellipsis;
   }
 
   .IconDelete {
     margin-top: 0;
-    margin-left: 12px; /* mantém margem lateral para separar o ícone do texto */
+    margin-left: 12px;
   }
 }
 
+@media (max-width: 515px) {
+  input {
+  padding: 8px;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #D1D5DB;     
+  outline: none;  
+  color: #080B12;
+  margin-right: 12px;
+  width: 100%; 
+  box-sizing: border-box; 
+}
 
+}
