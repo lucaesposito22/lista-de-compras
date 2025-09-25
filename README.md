@@ -24,21 +24,13 @@ Se preferir usar o Yarn, você pode rodar:
 ```
 yarn install
 ```
-2. Instale as dependências
-usando npm:
+
+2. Inicie o servidor de desenvolvimento
 ```
-npm install
-```
-Ou, se preferir Yarn:
-```
-yarn install
-```
-3. Inicie o servidor de desenvolvimento
-```
-npm start
+npm run dev
 ```
 Ou:
 ```
-yarn start
+yarn run dev
 ```
-O projeto será iniciado no navegador, geralmente em http://localhost:3000.
+O projeto será iniciado no navegador.
